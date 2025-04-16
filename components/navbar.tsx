@@ -80,16 +80,18 @@ export function Navbar() {
         </nav>
 
         <div className="hidden md:block">
-          <Button
-            className={cn(
-              "glass-button transition-all duration-300",
-              isScrolled
-                ? "bg-gradient-to-r from-lime-500 to-lime-400 text-white"
-                : "bg-white/20 text-white backdrop-blur-md",
-            )}
-          >
-            Get a Free Estimate
-          </Button>
+          <Link href="#contact">
+            <Button
+              className={cn(
+                "glass-button transition-all duration-300",
+                isScrolled
+                  ? "bg-gradient-to-r from-lime-500 to-lime-400 text-white"
+                  : "bg-white/20 text-white backdrop-blur-md",
+              )}
+            >
+              Get a Free Estimate
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -119,7 +121,9 @@ export function Navbar() {
                 <span className="capitalize">{section}</span>
               </Link>
             ))}
-            <Button className="glass-button mt-2 w-full">Get a Free Estimate</Button>
+            <Link href="#contact">
+              <Button className="glass-button mt-2 w-full" onClick={closeMenu}>Get a Free Estimate</Button>
+            </Link>
           </nav>
         </div>
       )}
