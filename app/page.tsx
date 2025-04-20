@@ -309,6 +309,17 @@ export default function Home() {
                       />
                     </div>
                     <div className="space-y-2">
+                      <label htmlFor="address" className="text-sm font-medium text-steel-700">
+                        Address
+                      </label>
+                      <Input
+                        id="address"
+                        type="address"
+                        placeholder="Your address"
+                        className="border-gray-200 bg-gray-50 focus:border-lime-500 focus:ring-lime-500"
+                      />
+                    </div>
+                    <div className="space-y-2">
                       <label htmlFor="message" className="text-sm font-medium text-steel-700">
                         Message
                       </label>
