@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { ChevronRight, Mail, MapPin, Phone } from "lucide-react"
@@ -274,7 +276,48 @@ export default function Home() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form className="space-y-5">
+                  <form 
+                    className="space-y-5" 
+                    onSubmit={async (e) => {
+                      e.preventDefault();
+                      const form = e.currentTarget;
+                      const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+                      const formData = new FormData(form);
+                      
+                      // Disable button and show loading state
+                      if (submitBtn) {
+                        submitBtn.disabled = true;
+                        submitBtn.innerText = 'Sending...';
+                      }
+                      
+                      try {
+                        const response = await fetch('/api/contact', {
+                          method: 'POST',
+                          body: formData,
+                        });
+                        
+                        const data = await response.json();
+                        
+                        if (data.success) {
+                          // Show success message
+                          alert('Thank you for your message! We will get back to you soon.');
+                          form.reset();
+                        } else {
+                          // Show error message
+                          alert(data.message || 'There was an error submitting your form. Please try again.');
+                        }
+                      } catch (error) {
+                        console.error('Error submitting form:', error);
+                        alert('There was an error submitting your form. Please try again.');
+                      } finally {
+                        // Reset button state
+                        if (submitBtn) {
+                          submitBtn.disabled = false;
+                          submitBtn.innerText = 'Submit Request';
+                        }
+                      }
+                    }}
+                  >
                     <div className="grid gap-5 md:grid-cols-2">
                       <div className="space-y-2">
                         <label htmlFor="name" className="text-sm font-medium text-steel-700">
@@ -282,7 +325,9 @@ export default function Home() {
                         </label>
                         <Input
                           id="name"
+                          name="name"
                           placeholder="Your name"
+                          required
                           className="border-gray-200 bg-gray-50 focus:border-lime-500 focus:ring-lime-500"
                         />
                       </div>
@@ -292,7 +337,9 @@ export default function Home() {
                         </label>
                         <Input
                           id="phone"
+                          name="phone"
                           placeholder="Your phone number"
+                          required
                           className="border-gray-200 bg-gray-50 focus:border-lime-500 focus:ring-lime-500"
                         />
                       </div>
@@ -303,8 +350,10 @@ export default function Home() {
                       </label>
                       <Input
                         id="email"
+                        name="email"
                         type="email"
                         placeholder="Your email address"
+                        required
                         className="border-gray-200 bg-gray-50 focus:border-lime-500 focus:ring-lime-500"
                       />
                     </div>
@@ -314,7 +363,7 @@ export default function Home() {
                       </label>
                       <Input
                         id="address"
-                        type="address"
+                        name="address"
                         placeholder="Your address"
                         className="border-gray-200 bg-gray-50 focus:border-lime-500 focus:ring-lime-500"
                       />
@@ -325,12 +374,14 @@ export default function Home() {
                       </label>
                       <Textarea
                         id="message"
+                        name="message"
                         placeholder="Tell us about your project"
                         rows={4}
+                        required
                         className="border-gray-200 bg-gray-50 focus:border-lime-500 focus:ring-lime-500"
                       />
                     </div>
-                    <Button className="w-full bg-lime-500 text-white hover:bg-lime-600">Submit Request</Button>
+                    <Button type="submit" className="w-full bg-lime-500 text-white hover:bg-lime-600">Submit Request</Button>
                   </form>
                 </CardContent>
               </Card>
@@ -403,11 +454,13 @@ export default function Home() {
         <div className="container px-4">
           <div className="mb-12 flex flex-col items-center justify-between gap-6 border-b border-gray-700 pb-10 md:flex-row">
             <div className="flex items-center">
-              <div className="mr-3 h-10 w-10 rounded-full bg-lime-500 p-2">
-                <svg viewBox="0 0 24 24" fill="none" className="h-full w-full text-white">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M9 22V12h6v10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+              <div className="relative h-16 w-48 mr-3">
+                <Image 
+                  src="/images/logo.png" 
+                  alt="DS Construction Logo" 
+                  fill
+                  className="object-cover"
+                />
               </div>
               <span className="font-display text-2xl font-bold">Dynamic Star Construction</span>
             </div>
