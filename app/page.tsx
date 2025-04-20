@@ -62,22 +62,27 @@ export default function Home() {
       </a>
 
       {/* Hero Section */}
-      <section id="home" className="relative bg-cover bg-center" style={{ backgroundImage: "url('/images/renovation-in-progress-1.jpg')" }}>
-        <div className="absolute inset-0 z-0 bg-steel-900/60"></div>
+      <section id="home" className="relative bg-white">
+        <div className="absolute inset-0 z-0 bg-steel-900/95">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(132,204,22,0.1),transparent_50%)]"></div>
+        </div>
+
         <div className="container relative z-10 flex min-h-[90vh] items-center px-4 py-20">
+          {/* <div className="grid items-center gap-16 md:grid-cols-2"> */}
           <div className="grid items-center gap-16 md:grid-cols-2 lg:grid-cols-2 w-full max-w-7xl mx-auto">
-            <div className="max-w-xl text-white text-center md:text-left">
+            <div className="max-w-xl">
               <div className="mb-6 inline-flex items-center rounded-full bg-lime-500/20 px-4 py-2 backdrop-blur-sm">
                 <span className="mr-2 h-2 w-2 rounded-full bg-lime-400"></span>
-                <span className="text-sm font-medium">Transform Your Home</span>
+                <span className="text-sm font-medium text-white">Transform Your Home</span>
               </div>
 
-              <h1 className="font-display text-5xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
+              <h1 className="font-display text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
                 We Build <span className="text-lime-400">Beautiful</span> Exteriors
               </h1>
 
-              <p className="mt-6 text-xl leading-relaxed">
-                Professional renovation services that transform your property with expert craftsmanship and premium materials.
+              <p className="mt-6 text-xl leading-relaxed text-gray-300">
+                Professional renovation services that transform your property with expert craftsmanship and premium
+                materials.
               </p>
 
               <div className="mt-10 flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
@@ -115,8 +120,38 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            <div className="relative hidden md:block">
+              <div className="relative h-[450px] w-full overflow-hidden rounded-2xl">
+                <Image
+                  src="/images/renovation-in-progress-1.jpg"
+                  alt="Renovation in progress"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute bottom-4 left-4 rounded-full bg-steel-800/80 px-3 py-1 text-sm font-medium text-white backdrop-blur-sm">
+                  During Renovation
+                </div>
+              </div>
+
+              <div className="absolute -bottom-6 -left-6 w-64 rounded-lg bg-white p-4 shadow-xl">
+                <div className="flex items-center space-x-3">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-lime-100">
+                    <svg className="h-6 w-6 text-lime-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="text-sm font-medium text-steel-600">Trusted by</div>
+                    <div className="text-xl font-bold text-steel-900">1,500+ Homeowners</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
       </section>
 
