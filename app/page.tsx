@@ -173,7 +173,7 @@ export default function Home() {
                   <div className="absolute -bottom-5 -right-5 h-24 w-24 rounded-lg bg-steel-600/10"></div>
                   <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                     <Image
-                      src="/images/about-image.jpg"
+                      src="/images/pic4.png"
                       alt="Our team at work"
                       width={600}
                       height={450}
