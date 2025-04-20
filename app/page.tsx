@@ -176,12 +176,12 @@ export default function Home() {
       </AnimatedSection>
 
       {/* About Us Section */}
-      <AnimatedSection id="about" className="py-24 bg-white">
+      <AnimatedSection id="about" className="py-24 bg-white overflow-hidden">
         <div className="container px-4">
           <div className="mx-auto max-w-6xl">
             <div className="grid gap-16 md:grid-cols-2">
               <div className="flex items-center">
-                <div className="relative">
+                <div className="relative mx-auto md:mx-0">
                   <div className="absolute -left-5 -top-5 h-24 w-24 rounded-lg bg-lime-400/20"></div>
                   <div className="absolute -bottom-5 -right-5 h-24 w-24 rounded-lg bg-steel-600/10"></div>
                   <div className="relative overflow-hidden rounded-2xl shadow-2xl">
@@ -196,7 +196,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-col justify-center">
-                <div className="mb-3 inline-flex items-center justify-center rounded-full bg-lime-100 px-3 py-1 text-sm font-medium text-lime-600 md:justify-start">
+                <div className="mb-3 inline-flex items-center rounded-full bg-lime-100 px-3 py-1 text-sm font-medium text-lime-600 md:justify-start">
                   About Us
                 </div>
                 <h2 className="mb-6 font-display text-4xl font-bold tracking-tight text-steel-900 md:text-5xl">
