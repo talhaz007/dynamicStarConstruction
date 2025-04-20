@@ -9,7 +9,7 @@ import { ServiceGallery } from "./service-gallery"
 const services = [
   {
     id: "siding",
-    name: "Siding Installation",
+    name: "Siding",
     description: "Premium vinyl, fiber cement, and wood siding options installed by certified professionals to protect and beautify your home.",
     images: [
       {
@@ -31,8 +31,8 @@ const services = [
   },
   {
     id: "roofing",
-    name: "Roofing & Gutters",
-    description: "Complete roofing solutions including shingle, metal, and flat roof installation with seamless gutter systems.",
+    name: "Roofing",
+    description: "Complete roofing solutions including shingle, metal, and flat roof installation.",
     images: [
       {
         src: "/images/services/roofing-1.jpg",
@@ -75,7 +75,7 @@ const services = [
   },
   {
     id: "masonry",
-    name: "Brickwork & Masonry",
+    name: "Brickwork & Pointing",
     description: "Expert masonry services including brick repair, stone installation, and decorative concrete work.",
     images: [
       {
@@ -114,6 +114,47 @@ const services = [
         src: "/images/services/stairs-3.JPG",
         alt: "stairs",
         title: "Stairs",
+      },
+    ],
+  },
+  {
+    id: "painting",
+    name: "Painting",
+    description: "Professional interior and exterior painting services using premium paints and materials for a flawless, long-lasting finish.",
+    images: [
+      {
+        src: "/images/services/painting-1.jpg",
+        alt: "Exterior house painting",
+        title: "Exterior House Painting",
+      },
+      {
+        src: "/images/services/painting-2.jpg",
+        alt: "Interior room painting",
+        title: "Interior Painting Services",
+      },
+    ],
+  },
+  {
+    id: "leak-repair",
+    name: "Leak Repair",
+    description: "Professional leak detection and repair services for roofs, basements, and plumbing systems to protect your home from water damage.",
+    images: [
+      {
+        src: "/images/services/leak-1.png",
+        alt: "Roof leak repair",
+        title: "Roof Leak Detection & Repair",
+      },
+    ],
+  },
+  {
+    id: "power-washing",
+    name: "Power Washing",
+    description: "Professional power washing services to remove dirt, grime, mold, and mildew from exterior surfaces, restoring your property's appearance and preventing damage.",
+    images: [
+      {
+        src: "/images/services/cleaning.webp",
+        alt: "House exterior power washing",
+        title: "Exterior House Cleaning",
       },
     ],
   },
