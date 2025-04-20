@@ -57,7 +57,7 @@ export function Navbar() {
               isScrolled ? "text-steel-900" : "text-white",
             )}
           >
-            Premium Home Exteriors
+            Dynamic Star Construction
           </span>
         </Link>
 
