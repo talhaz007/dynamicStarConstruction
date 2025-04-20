@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
 
 import { ServiceSelector } from "./service-selector"
 import { ServiceGallery } from "./service-gallery"
@@ -123,21 +122,22 @@ const services = [
 export function ServicesSection() {
   const [selectedService, setSelectedService] = useState(services[0])
 
+  // Handle service selection immediately without any animations
+  const handleServiceSelect = (service) => {
+    setSelectedService(service);
+  }
+
   return (
     <div className="space-y-12">
-      <ServiceSelector services={services} selectedService={selectedService} onSelectService={setSelectedService} />
+      <ServiceSelector 
+        services={services} 
+        selectedService={selectedService} 
+        onSelectService={handleServiceSelect} 
+      />
 
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={selectedService.id}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.3 }}
-        >
-          <ServiceGallery service={selectedService} />
-        </motion.div>
-      </AnimatePresence>
+      <div>
+        <ServiceGallery service={selectedService} />
+      </div>
     </div>
   )
 } 

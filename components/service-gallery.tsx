@@ -1,9 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight, Maximize } from "lucide-react"
-import { motion } from "framer-motion"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -35,6 +34,11 @@ export function ServiceGallery({ service }: ServiceGalleryProps) {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0)
   const [isDialogOpen, setIsDialogOpen] = useState(false)
 
+  // Reset selected image index when service changes
+  useEffect(() => {
+    setSelectedImageIndex(0);
+  }, [service.id]);
+
   const selectedImage = service.images[selectedImageIndex]
 
   const handlePrevious = () => {
@@ -59,6 +63,7 @@ export function ServiceGallery({ service }: ServiceGalleryProps) {
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+          priority={true}
         />
 
         <div className="absolute inset-0 flex items-center justify-between p-4">
@@ -120,11 +125,8 @@ export function ServiceGallery({ service }: ServiceGalleryProps) {
       <div className="mx-auto max-w-4xl">
         <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-300">
           {service.images.map((image, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
               className={cn(
                 "relative aspect-video w-40 shrink-0 snap-center cursor-pointer overflow-hidden rounded-lg border-2 transition-all duration-200 md:w-48",
                 selectedImageIndex === index ? "border-lime-500" : "border-transparent hover:border-lime-500/50",
@@ -137,9 +139,10 @@ export function ServiceGallery({ service }: ServiceGalleryProps) {
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 160px, 192px"
+                priority={index < 3}
               />
               {selectedImageIndex === index && <div className="absolute inset-0 bg-lime-500/10" />}
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

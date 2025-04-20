@@ -1,7 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
-
 import { cn } from "@/lib/utils"
 
 type Service = {
@@ -30,27 +28,13 @@ export function ServiceSelector({ services, selectedService, onSelectService }: 
             key={service.id}
             onClick={() => onSelectService(service)}
             className={cn(
-              "relative rounded-full px-6 py-2 text-sm font-medium transition-all md:text-base",
-              "hover:bg-lime-500/10",
-              "touch-manipulation",
+              "relative rounded-full px-6 py-2 text-sm font-medium transition-colors duration-150 md:text-base",
               selectedService.id === service.id
                 ? "bg-lime-500 text-white"
-                : "bg-gray-100 text-steel-600",
+                : "bg-gray-100 text-steel-600 hover:bg-lime-500/10 active:bg-lime-500/20",
             )}
           >
-            {selectedService.id === service.id && (
-              <motion.div
-                layoutId="activeServiceIndicator"
-                className="absolute inset-0 rounded-full bg-lime-500"
-                initial={false}
-                transition={{ 
-                  type: "spring", 
-                  duration: 0.6,
-                  bounce: 0.2
-                }}
-              />
-            )}
-            <span className="relative z-10">{service.name}</span>
+            {service.name}
           </button>
         ))}
       </div>
