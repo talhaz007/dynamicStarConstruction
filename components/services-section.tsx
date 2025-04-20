@@ -57,7 +57,7 @@ const services = [
     description: "Durable and stylish outdoor pavers designed to elevate your landscape. Ideal for patios, walkways, and driveways, they offer long-lasting performance and aesthetic appeal with minimal maintenance.",
     images: [
       {
-        src: "/images/services/pavers-1.JPG",
+        src: "/images/services/paver-new.JPG",
         alt: "pavers",
         title: "Pavers Steps",
       },
@@ -66,11 +66,11 @@ const services = [
         alt: "pavers",
         title: "Pavers",
       },
-      {
-        src: "/images/services/pavers-3.JPG",
-        alt: "pavers",
-        title: "Pavers Steps",
-      },
+    //   {
+    //     src: "/images/services/pavers-3.JPG",
+    //     alt: "pavers",
+    //     title: "Pavers Steps",
+    //   },
     ],
   },
   {
@@ -155,6 +155,40 @@ const services = [
         src: "/images/services/cleaning.webp",
         alt: "House exterior power washing",
         title: "Exterior House Cleaning",
+      },
+    ],
+  },
+  {
+    id: "composite-decking",
+    name: "Composite Decking",
+    description: "High-quality composite decking installation that provides the beauty of natural wood with enhanced durability, low maintenance, and resistance to rot, insects, and weathering.",
+    images: [
+      {
+        src: "/images/services/deck-1.JPG",
+        alt: "Composite deck installation",
+        title: "Modern Composite deck",
+      },
+      {
+        src: "/images/services/deck-2.JPG",
+        alt: "Composite deck",
+        title: "Composite Deck",
+      },
+      {
+        src: "/images/services/deck-3.JPG",
+        alt: "Composite deck",
+        title: "Composite Deck",
+      },
+    ],
+  },
+  {
+    id: "concrete",
+    name: "Concrete Driveways & Sidewalks",
+    description: "Professional installation and repair of concrete driveways and sidewalks, providing durability, curb appeal, and long-lasting performance for your property.",
+    images: [
+      {
+        src: "/images/services/concrete-1.jpg",
+        alt: "Concrete driveway installation",
+        title: "Custom Concrete Driveway",
       },
     ],
   },
