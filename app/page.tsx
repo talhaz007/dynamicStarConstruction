@@ -63,7 +63,7 @@ export default function Home() {
 
 {/* Hero Section */}
 <section id="home" className="relative bg-white">
-  <div className="absolute inset-0 z-0 bg-steel-900/95 md:bg-steel-900/95">
+  <div className="absolute inset-0 z-0 bg-steel-900/95">
     <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(132,204,22,0.1),transparent_50%)]"></div>
     {/* Mobile background image - Only visible on mobile */}
     <div 
@@ -72,10 +72,11 @@ export default function Home() {
         backgroundImage: "url('/images/renovation-in-progress-1.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        opacity: 0.7,
-        mixBlendMode: "overlay"
+        opacity: 0.7
       }}
     ></div>
+    {/* Mobile overlay with reduced opacity - Only visible on mobile */}
+    <div className="absolute inset-0 bg-steel-900/60 md:bg-transparent"></div>
   </div>
 
   <div className="container relative z-10 flex min-h-[90vh] items-center px-4 py-20">
