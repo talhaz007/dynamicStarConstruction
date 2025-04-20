@@ -61,99 +61,109 @@ export default function Home() {
         </svg>
       </a>
 
-      {/* Hero Section */}
-      <section id="home" className="relative bg-white">
-        <div className="absolute inset-0 z-0 bg-steel-900/95">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(132,204,22,0.1),transparent_50%)]"></div>
+{/* Hero Section */}
+<section id="home" className="relative bg-white">
+  <div className="absolute inset-0 z-0 bg-steel-900/95 md:bg-steel-900/95">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(132,204,22,0.1),transparent_50%)]"></div>
+    {/* Mobile background image - Only visible on mobile */}
+    <div 
+      className="absolute inset-0 md:hidden" 
+      style={{
+        backgroundImage: "url('/images/renovation-in-progress-1.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        opacity: 0.7,
+        mixBlendMode: "overlay"
+      }}
+    ></div>
+  </div>
+
+  <div className="container relative z-10 flex min-h-[90vh] items-center px-4 py-20">
+    <div className="grid items-center gap-16 md:grid-cols-2 lg:grid-cols-2 w-full max-w-7xl mx-auto">
+      <div className="max-w-xl">
+        <div className="mb-6 inline-flex items-center rounded-full bg-lime-500/20 px-4 py-2 backdrop-blur-sm">
+          <span className="mr-2 h-2 w-2 rounded-full bg-lime-400"></span>
+          <span className="text-sm font-medium text-white">Transform Your Home</span>
         </div>
 
-        <div className="container relative z-10 flex min-h-[90vh] items-center px-4 py-20">
-          {/* <div className="grid items-center gap-16 md:grid-cols-2"> */}
-          <div className="grid items-center gap-16 md:grid-cols-2 lg:grid-cols-2 w-full max-w-7xl mx-auto">
-            <div className="max-w-xl">
-              <div className="mb-6 inline-flex items-center rounded-full bg-lime-500/20 px-4 py-2 backdrop-blur-sm">
-                <span className="mr-2 h-2 w-2 rounded-full bg-lime-400"></span>
-                <span className="text-sm font-medium text-white">Transform Your Home</span>
-              </div>
+        <h1 className="font-display text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
+          We Build <span className="text-lime-400">Beautiful</span> Exteriors
+        </h1>
 
-              <h1 className="font-display text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
-                We Build <span className="text-lime-400">Beautiful</span> Exteriors
-              </h1>
+        <p className="mt-6 text-xl leading-relaxed text-gray-300">
+          Professional renovation services that transform your property with expert craftsmanship and premium
+          materials.
+        </p>
 
-              <p className="mt-6 text-xl leading-relaxed text-gray-300">
-                Professional renovation services that transform your property with expert craftsmanship and premium
-                materials.
-              </p>
+        <div className="mt-10 flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+          <Link href="#contact">
+            <Button size="lg" className="h-14 rounded-md bg-lime-500 px-8 text-base hover:bg-lime-600">
+              Get a Free Estimate
+              <ChevronRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
+          <Link href="#services">
+            <Button
+              variant="outline"
+              size="lg"
+              className="h-14 rounded-md border-white/20 bg-transparent px-8 text-base text-white hover:bg-white/10"
+            >
+              View Our Work
+            </Button>
+          </Link>
+        </div>
 
-              <div className="mt-10 flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                <Link href="#contact">
-                  <Button size="lg" className="h-14 rounded-md bg-lime-500 px-8 text-base hover:bg-lime-600">
-                    Get a Free Estimate
-                    <ChevronRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </Link>
-                <Link href="#services">
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="h-14 rounded-md border-white/20 bg-transparent px-8 text-base text-white hover:bg-white/10"
-                  >
-                    View Our Work
-                  </Button>
-                </Link>
-              </div>
+        <div className="mt-12 flex items-center space-x-8">
+          <div className="flex flex-col items-center">
+            <span className="text-3xl font-bold text-white">20+</span>
+            <span className="text-sm text-gray-400">Years Experience</span>
+          </div>
+          <div className="h-12 w-px bg-gray-700"></div>
+          <div className="flex flex-col items-center">
+            <span className="text-3xl font-bold text-white">1500+</span>
+            <span className="text-sm text-gray-400">Projects Completed</span>
+          </div>
+          <div className="h-12 w-px bg-gray-700"></div>
+          <div className="flex flex-col items-center">
+            <span className="text-3xl font-bold text-white">100%</span>
+            <span className="text-sm text-gray-400">Satisfaction</span>
+          </div>
+        </div>
+      </div>
 
-              <div className="mt-12 flex items-center space-x-8">
-                <div className="flex flex-col items-center">
-                  <span className="text-3xl font-bold text-white">20+</span>
-                  <span className="text-sm text-gray-400">Years Experience</span>
-                </div>
-                <div className="h-12 w-px bg-gray-700"></div>
-                <div className="flex flex-col items-center">
-                  <span className="text-3xl font-bold text-white">1500+</span>
-                  <span className="text-sm text-gray-400">Projects Completed</span>
-                </div>
-                <div className="h-12 w-px bg-gray-700"></div>
-                <div className="flex flex-col items-center">
-                  <span className="text-3xl font-bold text-white">100%</span>
-                  <span className="text-sm text-gray-400">Satisfaction</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative hidden md:block">
-              <div className="relative h-[450px] w-full overflow-hidden rounded-2xl">
-                <Image
-                  src="/images/renovation-in-progress-1.jpg"
-                  alt="Renovation in progress"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute bottom-4 left-4 rounded-full bg-steel-800/80 px-3 py-1 text-sm font-medium text-white backdrop-blur-sm">
-                  During Renovation
-                </div>
-              </div>
-
-              <div className="absolute -bottom-6 -left-6 w-64 rounded-lg bg-white p-4 shadow-xl">
-                <div className="flex items-center space-x-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-lime-100">
-                    <svg className="h-6 w-6 text-lime-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-sm font-medium text-steel-600">Trusted by</div>
-                    <div className="text-xl font-bold text-steel-900">1,500+ Homeowners</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div className="relative hidden md:block">
+        <div className="relative h-[450px] w-full overflow-hidden rounded-2xl">
+          <Image
+            src="/images/renovation-in-progress-1.jpg"
+            alt="Renovation in progress"
+            fill
+            className="object-cover object-center"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+          <div className="absolute bottom-4 left-4 rounded-full bg-steel-800/80 px-3 py-1 text-sm font-medium text-white backdrop-blur-sm">
+            During Renovation
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
-      </section>
+        <div className="absolute -bottom-6 -left-6 w-64 rounded-lg bg-white p-4 shadow-xl">
+          <div className="flex items-center space-x-3">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-lime-100">
+              <svg className="h-6 w-6 text-lime-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div>
+              <div className="text-sm font-medium text-steel-600">Trusted by</div>
+              <div className="text-xl font-bold text-steel-900">1,500+ Homeowners</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
+</section>
 
       {/* Services Section */}
       <AnimatedSection id="services" className="py-24">
