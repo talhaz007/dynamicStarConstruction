@@ -58,8 +58,8 @@ export function ServiceGallery({ service }: ServiceGalleryProps) {
       {/* Featured Image */}
       <div className="relative mx-auto aspect-[16/9] w-full max-w-4xl overflow-hidden rounded-xl bg-gray-100">
         <Image
-          src={selectedImage.src || "/placeholder.svg"}
-          alt={selectedImage.alt}
+          src={selectedImage?.src || "/placeholder.svg"}
+          alt={selectedImage?.alt}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
@@ -101,13 +101,13 @@ export function ServiceGallery({ service }: ServiceGalleryProps) {
           </DialogTrigger>
           <DialogContent className="max-w-5xl">
             <DialogHeader>
-              <DialogTitle>{selectedImage.title}</DialogTitle>
-              <DialogDescription>{service.name} - Project Showcase</DialogDescription>
+              <DialogTitle>{selectedImage?.title}</DialogTitle>
+              <DialogDescription>{service?.name} - Project Showcase</DialogDescription>
             </DialogHeader>
             <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg">
               <Image
-                src={selectedImage.src || "/placeholder.svg"}
-                alt={selectedImage.alt}
+                src={selectedImage?.src || "/placeholder.svg"}
+                alt={selectedImage?.alt}
                 fill
                 className="object-contain"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
@@ -117,7 +117,7 @@ export function ServiceGallery({ service }: ServiceGalleryProps) {
         </Dialog>
 
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white">
-          <h3 className="text-xl font-semibold">{selectedImage.title}</h3>
+          <h3 className="text-xl font-semibold">{selectedImage?.title}</h3>
         </div>
       </div>
 
