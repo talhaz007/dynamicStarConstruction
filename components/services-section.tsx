@@ -13,17 +13,17 @@ const services = [
     description: "Premium vinyl, fiber cement, and wood siding options installed by certified professionals to protect and beautify your home.",
     images: [
       {
-        src: "/images/services/siding-1.jpg",
+        src: "/images/services/siding-1.webp",
         alt: "Vinyl siding installation",
         title: "Modern Vinyl Siding",
       },
       {
-        src: "/images/services/siding-2.jpg",
+        src: "/images/services/siding-2.webp",
         alt: "Fiber cement siding",
         title: "Durable Fiber Cement Siding",
       },
       {
-        src: "/images/services/siding-3.jpg",
+        src: "/images/services/siding-3.webp",
         alt: "Wood siding installation",
         title: "Classic Wood Siding",
       },
@@ -35,17 +35,17 @@ const services = [
     description: "Complete roofing solutions including shingle, metal, and flat roof installation.",
     images: [
       {
-        src: "/images/services/roofing-1.jpg",
+        src: "/images/services/roofing-1.webp",
         alt: "Shingle roof installation",
         title: "Premium Shingle Roofing",
       },
       {
-        src: "/images/services/roofing-2.jpg",
+        src: "/images/services/roofing-2.webp",
         alt: "Metal roof installation",
         title: "Durable Metal Roofing",
       },
       {
-        src: "/images/services/roofing-3.jpg",
+        src: "/images/services/roofing-3.webp",
         alt: "Gutter installation",
         title: "Seamless Gutter Systems",
       },
@@ -57,17 +57,17 @@ const services = [
     description: "Durable and stylish outdoor pavers designed to elevate your landscape. Ideal for patios, walkways, and driveways, they offer long-lasting performance and aesthetic appeal with minimal maintenance.",
     images: [
       {
-        src: "/images/services/paver-new.JPG",
+        src: "/images/services/paver-new.webp",
         alt: "pavers",
         title: "Pavers Steps",
       },
       {
-        src: "/images/services/pavers-2.JPG",
+        src: "/images/services/pavers-2.webp",
         alt: "pavers",
         title: "Pavers",
       },
     //   {
-    //     src: "/images/services/pavers-3.JPG",
+    //     src: "/images/services/pavers-3.webp",
     //     alt: "pavers",
     //     title: "Pavers Steps",
     //   },
@@ -79,17 +79,17 @@ const services = [
     description: "Expert masonry services including brick repair, stone installation, and decorative concrete work.",
     images: [
       {
-        src: "/images/services/masonry-1.JPG",
+        src: "/images/services/masonry-1.webp",
         alt: "Brick repair",
         title: "Brick Repair & Restoration",
       },
       {
-        src: "/images/services/masonry-2.JPG",
+        src: "/images/services/masonry-2.webp",
         alt: "Stone installation",
         title: "Natural Stone Installation",
       },
       {
-        src: "/images/services/masonry-3.JPG",
+        src: "/images/services/masonry-3.webp",
         alt: "Decorative concrete",
         title: "Decorative Concrete Work",
       },
@@ -101,17 +101,17 @@ const services = [
     description: "Expert stair installation and repair services, ensuring safety and aesthetic appeal in your home.",
     images: [
       {
-        src: "/images/services/stairs-1.JPG",
+        src: "/images/services/stairs-1.webp",
         alt: "stairs",
         title: "Stairs",
       },
       {
-        src: "/images/services/stairs-2.JPG",
+        src: "/images/services/stairs-2.webp",
         alt: "stairs",
         title: "Stairs",
       },
       {
-        src: "/images/services/stairs-3.JPG",
+        src: "/images/services/stairs-3.webp",
         alt: "stairs",
         title: "Stairs",
       },
@@ -123,12 +123,12 @@ const services = [
     description: "Professional interior and exterior painting services using premium paints and materials for a flawless, long-lasting finish.",
     images: [
       {
-        src: "/images/services/painting-1.jpg",
+        src: "/images/services/painting-1.webp",
         alt: "Exterior house painting",
         title: "Exterior House Painting",
       },
       {
-        src: "/images/services/painting-2.jpg",
+        src: "/images/services/painting-2.webp",
         alt: "Interior room painting",
         title: "Interior Painting Services",
       },
@@ -140,7 +140,7 @@ const services = [
     description: "Professional leak detection and repair services for roofs, basements, and plumbing systems to protect your home from water damage.",
     images: [
       {
-        src: "/images/services/leak-1.png",
+        src: "/images/services/leak-1.webp",
         alt: "Roof leak repair",
         title: "Roof Leak Detection & Repair",
       },
@@ -164,17 +164,17 @@ const services = [
     description: "High-quality composite decking installation that provides the beauty of natural wood with enhanced durability, low maintenance, and resistance to rot, insects, and weathering.",
     images: [
       {
-        src: "/images/services/deck-1.JPG",
+        src: "/images/services/deck-1.webp",
         alt: "Composite deck installation",
         title: "Modern Composite deck",
       },
       {
-        src: "/images/services/deck-2.JPG",
+        src: "/images/services/deck-2.webp",
         alt: "Composite deck",
         title: "Composite Deck",
       },
       {
-        src: "/images/services/deck-3.JPG",
+        src: "/images/services/deck-3.webp",
         alt: "Composite deck",
         title: "Composite Deck",
       },
@@ -186,7 +186,7 @@ const services = [
     description: "Professional installation and repair of concrete driveways and sidewalks, providing durability, curb appeal, and long-lasting performance for your property.",
     images: [
       {
-        src: "/images/services/concrete-1.jpg",
+        src: "/images/services/concrete-1.webp",
         alt: "Concrete driveway installation",
         title: "Custom Concrete Driveway",
       },

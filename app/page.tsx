@@ -69,7 +69,7 @@ export default function Home() {
     <div 
       className="absolute inset-0 md:hidden" 
       style={{
-        backgroundImage: "url('/images/renovation-in-progress-1.jpg')",
+        backgroundImage: "url('/images/renovation-in-progress-1.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         opacity: 0.7
@@ -135,7 +135,7 @@ export default function Home() {
       <div className="relative hidden md:block">
         <div className="relative h-[450px] w-full overflow-hidden rounded-2xl">
           <Image
-            src="/images/renovation-in-progress-1.jpg"
+            src="/images/renovation-in-progress-1.webp"
             alt="Renovation in progress"
             fill
             className="object-cover object-center"
@@ -197,7 +197,7 @@ export default function Home() {
                   <div className="absolute -bottom-5 -right-5 h-24 w-24 rounded-lg bg-steel-600/10"></div>
                   <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                     <Image
-                      src="/images/pic4.png"
+                      src="/images/pic4.webp"
                       alt="Our team at work"
                       width={600}
                       height={450}
@@ -480,7 +480,7 @@ export default function Home() {
             <div className="flex items-center">
               <div className="relative h-16 w-48 mr-3">
                 <Image 
-                  src="/images/logo.png" 
+                  src="/images/logo.webp" 
                   alt="DS Construction Logo" 
                   fill
                   className="object-cover"
